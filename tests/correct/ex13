@@ -1,0 +1,13 @@
+VAR
+
+a
+
+BEGIN
+
+a := 0;
+
+FOR i FROM a TO 100 DO
+    SKIP;
+ENDFOR
+
+END

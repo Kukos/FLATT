@@ -1,0 +1,11 @@
+VAR
+
+BEGIN
+
+FOR i FROM 10 DOWNTO 1 DO
+    FOR j FROM i DOWNTO 1 DO
+            WRITE j;
+    ENDFOR
+ENDFOR
+
+END

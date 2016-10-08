@@ -1,0 +1,28 @@
+VAR
+
+a b
+
+
+BEGIN
+
+a := 0;
+
+WHILE a < 10 DO
+    SKIP;
+    SKIP;
+    SKIP;
+    WRITE a;
+    a := a + 1;
+    b := 20;
+    WHILE 10 <> b DO
+        SKIP;
+        SKIP;
+        b := b - 1;
+    ENDWHILE
+    a := a - 2;
+    a := a + 3;
+    a := a - 1;
+    WRITE b;
+ENDWHILE
+
+END

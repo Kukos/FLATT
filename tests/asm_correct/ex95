@@ -1,0 +1,233 @@
+VAR
+
+a b c d e f g h i j k l m n o p
+
+BEGIN
+
+{ Powinno byc: 2x 1 1 0 0 1 0 0 1 1 0 0 1 0 1 0 1 }
+
+READ a; { 10 }
+IF a < 15 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ b; { 1234 }
+IF b <= 12345 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ c; { 10 }
+IF c > 15 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ d; { 1234 }
+IF d >= 112345 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ e; { 123456789 }
+IF e = 123456789 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ f; { 11 }
+IF f <> 11 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ g; { 10 }
+IF g < 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ h; { 0 }
+IF h <= 10 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ i; { 10 }
+IF i > 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ j; { 0 }
+IF j >= 10 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ k; { 10 }
+IF k = 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ l; { 0 }
+IF l = 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ m; { 0 }
+IF m = 10 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ n; { 0 }
+IF n <> 10 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ o; { 0 }
+IF o <> 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ p; { 10 }
+IF p <> 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ a; { 15 }
+IF 10 < a THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ b; { 12345 }
+IF 1234 <= b THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ c; { 15 }
+IF 10 > c THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ d; { 112345 }
+IF 1234 >= d THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ e; { 123456789 }
+IF 123456789 = e THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ f; { 11 }
+IF 11 <> f THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ g; { 0 }
+IF 10 < g THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ h; { 10 }
+IF 0 <= h THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ i; { 0 }
+IF 10 > i THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ j; { 10 }
+IF 0 >= j THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ k; { 0 }
+IF 10 = 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ l; { 0 }
+IF 0 = l THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ m; { 10 }
+IF 0 = m THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ n; { 10 }
+IF 0 <> n THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ o; { 0 }
+IF 0 <> o THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ p; { 0 }
+IF 10 <> p THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+END

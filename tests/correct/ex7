@@ -1,0 +1,11 @@
+VAR
+a
+BEGIN
+
+FOR i FROM 10 TO 1000 DO
+	WRITE i;
+	SKIP;
+ENDFOR
+
+
+END

@@ -1,0 +1,138 @@
+VAR
+
+a b c d e f g h i j k l m n o p
+aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo pp
+
+BEGIN
+
+{ Powinno byc: 1 1 0 0 1 0 0 1 1 0 0 1 0 1 0 1 }
+
+READ a; { 10 }
+READ aa; { 15 }
+IF a < aa THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ b; { 1234 }
+READ bb; { 12345 }
+IF b <= 12345 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ c; { 10 }
+READ cc; { 15 }
+IF c > cc THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ d; { 1234 }
+READ dd; { 12345 }
+IF d >= dd THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ e; { 123456789 }
+READ ee; { 123456789 }
+IF e = ee THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ f; { 11 }
+READ ff; { 11 }
+IF f <> ff THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ g; { 10 }
+READ gg; { 0 }
+IF g < gg THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ h; { 0 }
+READ hh; { 10 }
+IF h <= hh THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ i; { 10 }
+READ ii; { 0 }
+IF i > ii THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ j; { 0 }
+READ jj; { 10 }
+IF j >= jj THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ k; { 10 }
+READ kk; { 0 }
+IF k = kk THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ l; { 0 }
+READ ll; { 0 }
+IF l = ll THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ m; { 0 }
+READ mm; { 10 }
+IF m = mm THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ n; { 0 }
+READ nn; { 10 }
+IF n <> nn THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ o; { 0 }
+READ oo; { 0 }
+IF o <> oo THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+READ p; { 10 }
+READ pp; { 0 }
+IF p <> pp THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+END

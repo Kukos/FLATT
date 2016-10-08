@@ -1,0 +1,126 @@
+VAR
+
+a b c d e f g t[100000000000000]
+ k l m
+BEGIN
+
+a := 1000;
+b := 1000 + a;
+c := a * b;
+
+WRITE a;
+WRITE b;
+WRITE c;
+
+d := a * c;
+t[d] := a + b;
+
+e := t[d] * d;
+f := d;
+d := t[d] * d;
+
+t[1] := 10;
+t[2] := 30;
+
+t[0] := t[1] * t[2]; { 300 }
+t[0] := t[0] - t[2]; { 270 }
+t[1] := t[1] - 100; { 0 }
+t[0] := 10000000 - t[0];
+t[0] := t[0] * t[1]; { 0 }
+
+WRITE e;
+WRITE d;
+WRITE f;
+WRITE t[f];
+WRITE t[0];
+WRITE t[1];
+WRITE t[2];
+
+
+READ a; { 1000 }
+b := 1000 + a;
+c := a * b;
+
+WRITE a;
+WRITE b;
+WRITE c;
+
+d := a * c;
+t[d] := a + b;
+
+e := t[d] * d;
+f := d;
+d := t[d] * d;
+
+WRITE e;
+WRITE d;
+WRITE f;
+WRITE t[f];
+
+a := 1000;
+READ b; { 2000 }
+c := a * b;
+
+WRITE a;
+WRITE b;
+WRITE c;
+
+d := a * c;
+t[d] := a + b;
+
+e := t[d] * d;
+f := d;
+d := t[d] * d;
+
+WRITE e;
+WRITE d;
+WRITE f;
+WRITE t[f];
+
+READ a; { 1000 }
+READ b; { 2000 }
+c := a * b;
+
+WRITE a;
+WRITE b;
+WRITE c;
+
+d := a * c;
+t[d] := a + b;
+
+e := t[d] * d;
+f := d;
+d := t[d] * d;
+
+WRITE e;
+WRITE d;
+WRITE f;
+WRITE t[f];
+
+l := 10;
+m := 30;
+
+k := l * m; { 300 }
+k := k - m; { 270 }
+l := l - 100; { 0 }
+k := 10000000 - k;
+k := k * l; { 0 }
+
+WRITE k;
+WRITE l;
+WRITE m;
+
+READ l; { 10}
+READ m; { 30}
+
+k := l * m; { 300 }
+k := k - m; { 270 }
+l := l - 100; { 0 }
+k := 10000000 - k;
+k := k * l; { 0 }
+
+WRITE k;
+WRITE l;
+WRITE m;
+
+END

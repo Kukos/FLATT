@@ -1,0 +1,44 @@
+VAR
+
+t[3]
+
+BEGIN
+
+READ t[0];
+READ t[1];
+
+t[2] := t[0] % t[1];
+t[0] := t[1] % t[2];
+t[1] := t[0] % t[2];
+
+WRITE t[0];
+WRITE t[1];
+WRITE t[2];
+
+READ t[0];
+t[1] := 3000;
+
+t[2] := t[0] % t[1];
+t[0] := t[1] % t[2];
+t[1] := t[0] % t[2];
+
+WRITE t[0];
+WRITE t[1];
+WRITE t[2];
+
+t[0] := 10000;
+READ t[1];
+
+t[2] := t[0] % t[1];
+t[0] := t[1] % t[2];
+t[1] := t[0] % t[2];
+
+WRITE t[0];
+WRITE t[1];
+WRITE t[2];
+
+READ t[0];
+t[0] := 10000 % t[0];
+WRITE t[0];
+
+END

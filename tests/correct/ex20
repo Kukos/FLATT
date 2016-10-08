@@ -1,0 +1,34 @@
+{
+    Insort
+}
+
+VAR
+
+key j k l n t[1000]
+
+BEGIN
+
+n := 1000 - 1;
+
+FOR i FROM 2 TO n DO
+    key := t[i];
+    j := i - 1;
+    l := j;
+    WHILE j > 0 DO
+        IF t[j] > key THEN
+            k := j + 1;
+            t[k] := t[j];
+            l := j;
+            j := j - 1;
+        ELSE
+            j := j - 1;
+        ENDIF
+    ENDWHILE
+    t[l] := key;
+ENDFOR
+
+FOR i FROM 0 TO n DO
+    WRITE t[i];
+ENDFOR
+
+END

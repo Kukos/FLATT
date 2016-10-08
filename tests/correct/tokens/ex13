@@ -1,0 +1,4 @@
+ a  :=  0 
+FOR  i  FROM  a  TO  100 
+SKIP
+ENDFOR

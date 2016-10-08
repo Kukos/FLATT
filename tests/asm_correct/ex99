@@ -1,0 +1,34 @@
+{ BUBBLESORT }
+
+VAR
+
+temp n m k t[2000]
+
+BEGIN
+
+n := 2000 - 1;
+
+FOR i FROM 0 TO n DO
+    t[i] := n - i;
+    t[i] := t[i] + 1;
+ENDFOR
+
+m := n - 1;
+FOR i FROM 0 TO m DO
+    FOR j FROM 0 TO m DO
+        k := j + 1;
+        IF t[j] > t[k] THEN
+            temp := t[j];
+            t[j] := t[k];
+            t[k] := temp;
+        ELSE
+            SKIP;
+        ENDIF
+    ENDFOR
+ENDFOR
+
+FOR i FROM 0 TO n DO
+    WRITE t[i];
+ENDFOR
+
+END

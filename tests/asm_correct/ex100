@@ -1,0 +1,65 @@
+{ Primarity test }
+
+VAR
+
+n div maxdiv temp t[1000000]
+
+BEGIN
+
+READ n;
+
+temp := n % 2;
+IF temp = 0 THEN
+    div := n * 2;
+ELSE
+    div := 3;
+    maxdiv := n / 2;
+    WHILE div < maxdiv DO
+        temp := n % div;
+        IF temp = 0 THEN
+            div := n * 2; { break + set flag to none-prime}
+        ELSE
+            div := div + 2;
+        ENDIF
+    ENDWHILE
+ENDIF
+
+temp := n * 2;
+IF temp = div THEN
+    WRITE 0;
+ELSE
+    WRITE 1;
+ENDIF
+
+{ Arry Version }
+READ n;
+READ div;
+READ maxdiv;
+READ temp;
+
+READ t[n];
+
+t[temp] := t[n] % 2;
+IF t[temp] = 0 THEN
+    t[div] := t[n] * 2;
+ELSE
+    t[div] := 3;
+    t[maxdiv] := t[n] / 2;
+    WHILE t[div] < t[maxdiv] DO
+        t[temp] := t[n] % t[div];
+        IF t[temp] = 0 THEN
+            t[div] := t[n] * 2; { break + set flag to none-prime}
+        ELSE
+            t[div] := t[div] + 2;
+        ENDIF
+    ENDWHILE
+ENDIF
+
+t[temp] := t[n] * 2;
+IF t[temp] = t[div] THEN
+    WRITE 0;
+ELSE
+    WRITE 1;
+ENDIF
+
+END

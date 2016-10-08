@@ -1,0 +1,24 @@
+VAR
+
+a
+
+
+BEGIN
+
+READ a;
+
+WHILE a < 103 DO
+    WHILE a < 102 DO
+        WHILE a < 101 DO
+            WHILE a < 100 DO
+                a := a + 20;
+                WRITE a;
+            ENDWHILE
+            WRITE a;
+        ENDWHILE
+        WRITE a;
+    ENDWHILE
+    WRITE a;
+ENDWHILE
+
+END

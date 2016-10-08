@@ -1,0 +1,8 @@
+ a  :=  0 
+ b  :=  a 
+FOR  i  FROM  a  TO  b 
+ a  :=  i  +  1 
+FOR  j  FROM  a  TO  b 
+ j  :=  j 
+ENDFOR
+ENDFOR

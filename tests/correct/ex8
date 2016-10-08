@@ -1,0 +1,22 @@
+VAR
+
+a b
+BEGIN
+
+a := 0;
+b := 10;
+
+FOR i FROM 10000 DOWNTO 10 DO
+	WRITE i;
+	FOR j FROM a TO b DO
+		WRITE j;
+		FOR k FROM i TO j DO
+			WRITE k;
+			FOR l FROM k TO j DO
+				WRITE i;
+			ENDFOR
+		ENDFOR
+	ENDFOR
+ENDFOR
+
+END

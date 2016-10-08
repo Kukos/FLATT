@@ -1,0 +1,14 @@
+ a  :=  0 
+ b  :=  10 
+FOR  i  FROM  10000  DOWNTO  10 
+WRITE	 i 
+FOR  j  FROM  a  TO  b 
+WRITE	 j 
+FOR  k  FROM  i  TO  j 
+WRITE	 k 
+FOR  l  FROM  k  TO  j 
+WRITE	 i 
+ENDFOR
+ENDFOR
+ENDFOR
+ENDFOR

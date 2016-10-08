@@ -1,0 +1,8 @@
+VAR
+a
+
+BEGIN
+
+READ a;
+
+END

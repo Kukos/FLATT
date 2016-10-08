@@ -1,0 +1,98 @@
+VAR
+
+a b c d
+
+BEGIN
+
+READ a;
+READ b;
+
+IF a < b THEN
+    FOR i FROM a TO b DO
+        WRITE i;
+        c := b / 2;
+        IF i < c THEN
+            WRITE 11111;
+            WHILE a < c DO
+                WRITE a;
+                a := a + 2;
+            ENDWHILE
+        ELSE
+            d := i / 2;
+            WRITE 22222;
+            IF d < c THEN
+                WRITE d;
+            ELSE
+                WRITE c;
+            ENDIF
+        ENDIF
+    ENDFOR
+ELSE
+    FOR i FROM a DOWNTO b DO
+        WRITE i;
+        c := b * 2;
+        IF i > c THEN
+        WRITE 11111;
+        WHILE c < a DO
+            WRITE a;
+            a := a - 2;
+        ENDWHILE
+        ELSE
+            d := i * 2;
+            WRITE 22222;
+            IF d < c THEN
+                WRITE d;
+            ELSE
+                WRITE c;
+            ENDIF
+        ENDIF
+    ENDFOR
+ENDIF
+
+READ a;
+READ b;
+
+IF a < b THEN
+    FOR i FROM a TO b DO
+        WRITE i;
+        c := b / 2;
+        IF i < c THEN
+            WRITE 11111;
+            WHILE a < c DO
+                WRITE a;
+                a := a + 2;
+            ENDWHILE
+        ELSE
+            d := i / 2;
+            WRITE 22222;
+            IF d < c THEN
+                WRITE d;
+            ELSE
+                WRITE c;
+            ENDIF
+        ENDIF
+    ENDFOR
+ELSE
+    FOR i FROM a DOWNTO b DO
+        WRITE i;
+        c := b * 2;
+        IF i > c THEN
+        WRITE 11111;
+        WHILE c < a DO
+            WRITE a;
+            a := a - 2;
+        ENDWHILE
+        ELSE
+            d := i * 2;
+            WRITE 22222;
+            IF d < c THEN
+                WRITE d;
+            ELSE
+                WRITE c;
+            ENDIF
+        ENDIF
+    ENDFOR
+ENDIF
+
+
+END

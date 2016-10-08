@@ -1,0 +1,38 @@
+VAR
+
+t[7]
+
+BEGIN
+
+t[0] := 0;
+
+WHILE t[0] <= 2 DO
+    t[1] := 0;
+    WHILE t[1] <= 2 DO
+        t[2] := 0;
+        WHILE t[2] <= 2 DO
+            t[3] := 0;
+            WHILE t[3] <= 2 DO
+                t[4] := 0;
+                WHILE t[4] <= 2 DO
+                    t[5] := 0;
+                    WHILE t[5] <= 2 DO
+                        t[6] := 0;
+                        WHILE t[6] <= 2 DO
+                            WRITE t[6];
+                            t[6] := t[6] + 1;
+                        ENDWHILE
+                        t[5] := t[5] + 1;
+                    ENDWHILE
+                    t[4] := t[4] + 1;
+                ENDWHILE
+                t[3] := t[3] + 1;
+            ENDWHILE
+            t[2] := t[2] + 1;
+        ENDWHILE
+        t[1] := t[1] + 1;
+    ENDWHILE
+    t[0] := t[0] + 1;
+ENDWHILE
+
+END

@@ -1,0 +1,40 @@
+VAR
+
+a b c
+
+
+BEGIN
+
+a := 10;
+
+FOR i FROM 1 TO a DO
+    WRITE i;
+ENDFOR
+
+b := 1;
+
+FOR i FROM b TO 10 DO
+    WRITE i;
+ENDFOR
+
+FOR i FROM b TO a DO
+    WRITE i;
+ENDFOR
+
+READ a;
+
+FOR i FROM 1 TO a DO
+    WRITE i;
+ENDFOR
+
+READ b;
+
+FOR i FROM b TO 10 DO
+    WRITE i;
+ENDFOR
+
+FOR i FROM b TO a DO
+    WRITE i;
+ENDFOR
+
+END

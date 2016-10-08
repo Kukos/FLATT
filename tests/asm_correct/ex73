@@ -1,0 +1,63 @@
+VAR
+
+a b c d e
+
+BEGIN
+
+FOR i FROM 1 TO 5 DO
+    a := 1 / 5;
+    WRITE a;
+
+    b := 10 / 1;
+    WRITE b;
+
+    a := 0 / 9;
+    WRITE a;
+
+    b := 100 / 0;
+    WRITE b;
+ENDFOR
+
+c := 0;
+d := 1;
+
+e := 0;
+WHILE e < 3 DO
+    e := e + 1;
+
+    a := 5 / c;
+    WRITE a;
+
+    b := c / 10;
+    WRITE b;
+
+    a := 4 / d;
+    WRITE a;
+
+    b := d / 9;
+    WRITE b;
+ENDWHILE
+
+READ a;
+READ b;
+
+e := a;
+
+a := a / c;
+WRITE a;
+
+a := e;
+
+a := a / d;
+WRITE a;
+
+e := b;
+
+b := c / b;
+WRITE b;
+
+b := e;
+b := d / b;
+WRITE b;
+
+END

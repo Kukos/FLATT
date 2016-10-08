@@ -1,0 +1,60 @@
+VAR
+
+a b t[5]
+
+BEGIN
+
+READ a;
+
+a := a * 2;
+a := a * 4;
+a := 16 * a;
+a := a * 9;
+
+WRITE a;
+
+b := 100;
+b := b * 2;
+b := b * 4;
+b := 16 * b;
+b := b * 9;
+
+WRITE b;
+
+a := b * 2;
+WRITE a;
+
+a := b * 4;
+WRITE a;
+
+a := 16 * b;
+WRITE a;
+
+a := b * 9;
+WRITE a;
+
+t[0] := a;
+t[1] := b;
+
+t[2] := 100;
+t[2] := t[2] * 2;
+t[2] := t[2] * 4;
+t[2] := 16 * t[2];
+t[2] := t[2] * 9;
+
+
+t[0] := t[1] * 2;
+WRITE t[0];
+
+t[0] := t[1] * 4;
+WRITE t[0];
+
+t[0] := 16 * t[1];
+WRITE t[0];
+
+t[0] := t[1] * 9;
+WRITE t[0];
+
+
+
+END

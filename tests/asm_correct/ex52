@@ -1,0 +1,20 @@
+VAR
+
+a b c n
+
+BEGIN
+
+READ n;
+
+a := 0;
+b := 1;
+
+FOR i FROM 0 TO n DO
+	c := a + b;
+	a := b;
+	b := c;
+ENDFOR
+
+WRITE c;
+
+END

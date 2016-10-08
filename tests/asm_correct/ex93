@@ -1,0 +1,233 @@
+VAR
+
+a b c d e f g h i j k l m n o p
+
+BEGIN
+
+{ Powinno byc: 2x 1 1 0 0 1 0 0 1 1 0 0 1 0 1 0 1 }
+
+a := 10;
+IF a < 15 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+b := 1234;
+IF b <= 12345 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+c := 10;
+IF c > 15 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+d := 1234;
+IF d >= 112345 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+e := 123456789;
+IF e = 123456789 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+f := 11;
+IF f <> 11 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+g := 10;
+IF g < 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+h := 0;
+IF h <= 10 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+i := 10;
+IF i > 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+j := 0;
+IF j >= 10 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+k := 10;
+IF k = 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+l := 0;
+IF l = 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+m := 0;
+IF m = 10 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+n := 0;
+IF n <> 10 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+o := 0;
+IF o <> 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+p := 10;
+IF p <> 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+a := 15;
+IF 10 < a THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+b := 12345;
+IF 1234 <= b THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+c := 15;
+IF 10 > c THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+d := 112345;
+IF 1234 >= d THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+e := 123456789;
+IF 123456789 = e THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+f := 11;
+IF 11 <> f THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+g := 0;
+IF 10 < g THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+h := 10;
+IF 0 <= h THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+i := 0;
+IF 10 > i THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+j := 10;
+IF 0 >= j THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+k := 0;
+IF 10 = 0 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+l := 0;
+IF 0 = l THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+m := 10;
+IF 0 = m THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+n := 10;
+IF 0 <> n THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+o := 0;
+IF 0 <> o THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+p := 0;
+IF 10 <> p THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+END

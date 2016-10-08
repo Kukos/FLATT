@@ -1,0 +1,138 @@
+VAR
+
+a b c d e f g h i j k l m n o p
+aa bb cc dd ee ff gg hh ii jj kk ll mm nn oo pp
+
+BEGIN
+
+{ Powinno byc: 1 1 0 0 1 0 0 1 1 0 0 1 0 1 0 1 }
+
+a := 10;
+aa := 15;
+IF a < aa THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+b := 1234;
+bb := 12345;
+IF b <= 12345 THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+c := 10;
+cc := 15;
+IF c > cc THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+d := 1234;
+dd := 112345;
+IF d >= dd THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+e := 123456789;
+ee := 123456789;
+IF e = ee THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+f := 11;
+ff := 11;
+IF f <> ff THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+g := 10;
+gg := 0;
+IF g < gg THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+h := 0;
+hh := 10;
+IF h <= hh THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+i := 10;
+ii := 0;
+IF i > ii THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+j := 0;
+jj := 10;
+IF j >= jj THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+k := 10;
+kk := 0;
+IF k = kk THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+l := 0;
+ll := 0;
+IF l = ll THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+m := 0;
+mm := 10;
+IF m = mm THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+n := 0;
+nn := 10;
+IF n <> nn THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+o := 0;
+oo := 0;
+IF o <> oo THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+p := 10;
+pp := 0;
+IF p <> pp THEN
+    WRITE 1;
+ELSE
+    WRITE 0;
+ENDIF
+
+END

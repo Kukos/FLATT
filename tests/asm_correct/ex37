@@ -1,0 +1,30 @@
+VAR
+
+a b c d e f g h
+
+BEGIN
+
+READ a;
+READ b;
+READ d;
+READ e;
+
+WHILE a < b DO
+	WRITE a;
+	c := b - a;
+	WHILE c < b DO
+		WRITE c;
+		f := d * e;
+		g := f * e;
+		WHILE f < g DO
+	        f := f + a;
+		    f := f + b;
+			f := f + c;
+		ENDWHILE
+        WRITE f;
+		c := c + 1;
+	ENDWHILE
+	a := a + 1;
+ENDWHILE
+
+END

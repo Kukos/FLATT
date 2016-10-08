@@ -1,0 +1,37 @@
+VAR
+
+BEGIN
+
+
+FOR a FROM 1 TO 3 DO
+    FOR b FROM a TO 3 DO
+        FOR c FROM b TO 3 DO
+            WRITE b;
+            WRITE c;
+        ENDFOR
+    ENDFOR
+
+    FOR b FROM a TO 3 DO
+        FOR d FROM b TO 3 DO
+            WRITE b;
+            WRITE d;
+        ENDFOR
+    ENDFOR
+
+    FOR i FROM 1 TO 3 DO
+        WRITE i;
+    ENDFOR
+ENDFOR
+
+FOR i FROM 1 TO 3 DO
+    FOR j FROM i TO 3 DO
+        WRITE i;
+        WRITE j;
+    ENDFOR
+ENDFOR
+
+FOR k FROM 1 TO 3 DO
+    WRITE k;
+ENDFOR
+
+END

@@ -1,0 +1,104 @@
+VAR
+
+a b
+
+BEGIN
+
+READ a;
+b := 15;
+
+WHILE a < b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+READ a;
+b := 10;
+
+WHILE a < b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+READ a;
+b := 10;
+
+WHILE a > b DO
+	WRITE a;
+	a := a - 1;
+ENDWHILE
+
+READ a;
+b := 11;
+
+WHILE a > b DO
+	WRITE a;
+	a := a - 1;
+ENDWHILE
+
+READ a;
+b := 10;
+
+WHILE a <= b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+READ a;
+b := 10;
+
+WHILE a <= b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+READ a;
+b := 2;
+
+WHILE a >= b DO
+	WRITE a;
+	a := a - 1;
+ENDWHILE
+
+READ a;
+b := 8;
+
+WHILE a >= b DO
+	WRITE a;
+	a := a - 1;
+ENDWHILE
+
+READ a;
+b := 1;
+
+WHILE a = b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+READ a;
+b := 2;
+
+WHILE a = b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+
+READ a;
+b := 5;
+
+WHILE a <> b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+READ a;
+b := 4;
+
+WHILE a <> b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+END

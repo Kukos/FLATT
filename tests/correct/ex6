@@ -1,0 +1,39 @@
+VAR
+
+a b c d
+
+BEGIN
+
+READ a;
+WRITE a;
+
+b := a + 10;
+c := a + b;
+
+IF a <> b THEN
+	READ b;
+	READ c;
+	WHILE b <= c DO
+		a := 10;
+		b := 10;
+		SKIP;
+		WHILE b >= c DO
+			READ a;
+			WRITE b;
+			SKIP;
+		ENDWHILE
+	ENDWHILE
+	d := b + c;
+	WRITE d;
+ELSE
+	READ a;
+	READ d;
+	b := a * d;
+ENDIF
+
+WRITE a;
+WRITE b;
+WRITE c;
+WRITE d;
+
+END

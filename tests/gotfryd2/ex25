@@ -1,0 +1,20 @@
+VAR
+  tab[1325476980] a b c d n 
+BEGIN
+  READ a;
+  tab[a] := 9;
+
+  n := 1325476979;
+  tab[n] := tab[a];
+  
+  b :=  111111111;
+  b := b * tab[a];
+  
+  c :=  90909090;
+  READ d;
+  
+  tab[a] := b - c;
+  tab[n] := tab[a] / d;
+  WRITE tab[a];
+  WRITE tab[n];
+END 

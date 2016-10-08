@@ -1,0 +1,16 @@
+ n  :=  100  -  1 
+FOR  i  FROM  n  DOWNTO  2 
+ sieve[ i ]  :=  1 
+ENDFOR
+FOR  i  FROM  2  TO  n 
+IF	 sieve[ i ]  <>  0 
+ j  :=  i  +  i 
+WHILE	 j  <=  n 
+ sieve[ j ]  :=  0 
+ j  :=  j  +  i 
+ENDWHILE
+WRITE	 i 
+ELSE
+SKIP
+ENDIF
+ENDFOR

@@ -1,0 +1,34 @@
+ a  :=  0 
+ b  :=  a 
+ c  :=  b 
+ d  :=  c 
+IF	 a  <  b 
+SKIP
+ELSE
+SKIP
+ENDIF
+IF	 b  =  10 
+SKIP
+ELSE
+SKIP
+ENDIF
+IF	 11  <>  12 
+SKIP
+ELSE
+SKIP
+ENDIF
+IF	 b  <=  d 
+SKIP
+ELSE
+SKIP
+ENDIF
+IF	 a  >  1000 
+SKIP
+ELSE
+SKIP
+ENDIF
+IF	 100  >=  t[ a ] 
+SKIP
+ELSE
+SKIP
+ENDIF

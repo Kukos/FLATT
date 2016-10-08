@@ -1,0 +1,104 @@
+VAR
+
+a b
+
+BEGIN
+
+a := 10;
+b := 15;
+
+WHILE a < b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+a := 11;
+b := 10;
+
+WHILE a < b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+a := 15;
+b := 10;
+
+WHILE a > b DO
+	WRITE a;
+	a := a - 1;
+ENDWHILE
+
+a := 10;
+b := 11;
+
+WHILE a > b DO
+	WRITE a;
+	a := a - 1;
+ENDWHILE
+
+a := 5;
+b := 10;
+
+WHILE a <= b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+a := 11;
+b := 10;
+
+WHILE a <= b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+a := 8;
+b := 2;
+
+WHILE a >= b DO
+	WRITE a;
+	a := a - 1;
+ENDWHILE
+
+a := 2;
+b := 8;
+
+WHILE a >= b DO
+	WRITE a;
+	a := a - 1;
+ENDWHILE
+
+a := 1;
+b := 1;
+
+WHILE a = b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+a := 1;
+b := 2;
+
+WHILE a = b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+
+a := 1;
+b := 5;
+
+WHILE a <> b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+a := 4;
+b := 4;
+
+WHILE a <> b DO
+	WRITE a;
+	a := a + 1;
+ENDWHILE
+
+END

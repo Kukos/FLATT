@@ -1,0 +1,30 @@
+{
+    Erastotenes's sieve
+}
+
+VAR
+
+n j sieve[100]
+
+BEGIN
+
+n := 100 - 1;
+
+FOR i FROM n DOWNTO 2 DO
+    sieve[i] := 1;
+ENDFOR
+
+FOR i FROM 2 TO n DO
+    IF sieve[i] <> 0 THEN
+        j := i + i;
+        WHILE j <= n DO
+            sieve[j] := 0;
+            j := j + i;
+            ENDWHILE
+        WRITE i;
+    ELSE
+        SKIP;
+    ENDIF
+ENDFOR
+
+END

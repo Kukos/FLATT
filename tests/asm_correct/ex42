@@ -1,0 +1,38 @@
+VAR
+
+a b c d e f g
+
+BEGIN
+
+a := 0;
+
+WHILE a < 3 DO
+    b := 0;
+    WHILE b < 3 DO
+        c := 0;
+        WHILE c < 3 DO
+            d := 0;
+            WHILE d < 3 DO
+                e := 0;
+                WHILE e < 3 DO
+                    f := 0;
+                    WHILE f < 3 DO
+                        g := 0;
+                        WHILE g < 3 DO
+                            WRITE g;
+                            g := g + 1;
+                        ENDWHILE
+                        f := f + 1;
+                    ENDWHILE
+                    e := e + 1;
+                ENDWHILE
+                d := d + 1;
+            ENDWHILE
+            c := c + 1;
+        ENDWHILE
+        b := b + 1;
+    ENDWHILE
+    a := a + 1;
+ENDWHILE
+
+END

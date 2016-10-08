@@ -1,0 +1,18 @@
+{ fromdown.imp - zakresy petli }
+VAR
+	a b c
+BEGIN
+	a := 10000;
+	b := 0;
+	c := 100;
+	FOR i FROM a TO b DO
+		a := a + c;
+	ENDFOR
+	WRITE a;
+	
+	FOR i FROM b DOWNTO a DO
+		a := a + c;
+	ENDFOR
+	WRITE a;
+END
+

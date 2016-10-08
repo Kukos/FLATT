@@ -1,0 +1,8 @@
+VAR
+a
+BEGIN
+
+a := 0;
+WRITE a;
+
+END

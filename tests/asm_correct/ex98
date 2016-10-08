@@ -1,0 +1,44 @@
+{ GCD }
+
+VAR
+a b c t[10000000]
+
+BEGIN
+
+READ a;
+READ b;
+
+WHILE b > 0 DO
+    c := a % b;
+    a := b;
+    b := c;
+ENDWHILE
+
+WRITE a;
+
+READ a;
+READ b;
+
+WHILE b > 0 DO
+    c := a % b;
+    a := b;
+    b := c;
+ENDWHILE
+
+WRITE a;
+
+READ a;
+READ b;
+READ c;
+READ t[a];
+READ t[b];
+
+WHILE t[b] > 0 DO
+    t[c] := t[a] % t[b];
+    t[a] := t[b];
+    t[b] := t[c];
+ENDWHILE
+
+WRITE t[a];
+
+END

@@ -1,0 +1,13 @@
+VAR
+
+a
+
+BEGIN
+
+a := 0;
+
+WHILE a <> 10 DO
+    SKIP;
+ENDWHILE
+
+END

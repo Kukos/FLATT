@@ -1,0 +1,14 @@
+VAR
+
+a
+BEGIN
+
+a := 0;
+
+IF a < 10 THEN
+    SKIP;
+ELSE
+    SKIP;
+ENDIF
+
+END

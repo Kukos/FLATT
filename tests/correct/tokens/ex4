@@ -1,0 +1,14 @@
+READ	 a 
+WRITE	 100000 
+WRITE	 b[ a ] 
+READ	 a 
+WRITE	 b[ 1 ] 
+SKIP
+SKIP
+READ	 a 
+WRITE	 a 
+SKIP
+ a  :=  10 
+ a  :=  a  +  b[ a ] 
+ a  :=  10  +  b[ 10 ] 
+ a  :=  b[ 100 ]  +  100 

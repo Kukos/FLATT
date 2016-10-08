@@ -1,0 +1,54 @@
+VAR
+
+a b c d
+
+BEGIN
+
+READ a;
+
+a := a + 3;
+a := a + 1000;
+
+a := 3 + a;
+a := 1000 + a;
+
+WRITE a;
+
+b := 1000;
+b := b + 5;
+b := b + 1000;
+b := 5 + b;
+b := b + 1000;
+
+WRITE b;
+
+READ c;
+READ d;
+
+c := d + 5;
+WRITE c;
+
+c := d + 1000;
+WRITE c;
+
+c := 5 + d;
+WRITE c;
+
+c := 1000 + d;
+WRITE c;
+
+a := 10;
+
+d := a + 3;
+WRITE d;
+
+d := a + 1000;
+WRITE d;
+
+d := 3 + a;
+WRITE d;
+
+d := 1000 + a;
+WRITE d;
+
+END

@@ -1,0 +1,19 @@
+{ cond.imp - instrukcje warunkowe }
+VAR
+	a b
+BEGIN
+	READ a;
+	a := 5 + a;
+	b := a - 2047;
+	IF a < b THEN
+		SKIP;
+	ELSE
+		WRITE a;
+	ENDIF
+	IF b <= a THEN
+		WRITE b;
+	ELSE
+		SKIP;
+	ENDIF
+END
+

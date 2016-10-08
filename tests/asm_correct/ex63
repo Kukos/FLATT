@@ -1,0 +1,81 @@
+VAR
+a
+
+BEGIN
+
+a := 0;
+
+FOR b FROM 3 DOWNTO a DO
+    FOR c FROM 3 DOWNTO b DO
+        FOR d FROM 3 DOWNTO c DO
+            FOR e FROM 3 DOWNTO d DO
+                FOR f FROM 3 DOWNTO e DO
+                    FOR g FROM 3 DOWNTO f DO
+                        FOR h FROM 3 DOWNTO g DO
+                            FOR i FROM 3 DOWNTO h DO
+                                FOR j FROM 3 DOWNTO i DO
+                                    FOR k FROM 3 DOWNTO j DO
+                                        FOR l FROM 3 DOWNTO k DO
+                                            FOR m FROM 3 DOWNTO l DO
+                                                FOR n FROM 3 DOWNTO m DO
+                                                    FOR o FROM 3 DOWNTO n DO
+                                                        FOR p FROM 3 DOWNTO o DO
+                                                            FOR r FROM 3 DOWNTO p DO
+                                                                FOR s FROM 3 DOWNTO r DO
+                                                                    FOR t FROM 3 DOWNTO s DO
+                                                                        FOR u FROM 3 DOWNTO t DO
+                                                                            FOR w FROM 3 DOWNTO u DO
+                                                                                FOR x FROM 3 DOWNTO w DO
+                                                                                    FOR y FROM 3 DOWNTO x DO
+                                                                                        FOR z FROM 3 DOWNTO y DO
+                                                                                            WRITE a;
+                                                                                            WRITE b;
+                                                                                            WRITE c;
+                                                                                            WRITE d;
+                                                                                            WRITE e;
+                                                                                            WRITE f;
+                                                                                            WRITE g;
+                                                                                            WRITE h;
+                                                                                            WRITE i;
+                                                                                            WRITE j;
+                                                                                            WRITE k;
+                                                                                            WRITE l;
+                                                                                            WRITE m;
+                                                                                            WRITE n;
+                                                                                            WRITE o;
+                                                                                            WRITE p;
+                                                                                            WRITE r;
+                                                                                            WRITE s;
+                                                                                            WRITE t;
+                                                                                            WRITE u;
+                                                                                            WRITE w;
+                                                                                            WRITE x;
+                                                                                            WRITE y;
+                                                                                            WRITE z;
+                                                                                        ENDFOR
+                                                                                    ENDFOR
+                                                                                ENDFOR
+                                                                            ENDFOR
+                                                                        ENDFOR
+                                                                    ENDFOR
+                                                                ENDFOR
+                                                            ENDFOR
+                                                        ENDFOR
+                                                    ENDFOR
+                                                ENDFOR
+                                            ENDFOR
+                                        ENDFOR
+                                    ENDFOR
+                                ENDFOR
+                            ENDFOR
+                        ENDFOR
+                    ENDFOR
+                ENDFOR
+            ENDFOR
+        ENDFOR
+    ENDFOR
+ENDFOR
+
+
+
+END

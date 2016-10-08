@@ -1,0 +1,33 @@
+VAR
+
+a
+
+BEGIN
+
+a := 0;
+
+WHILE 10 < 5 DO
+    WRITE a;
+ENDWHILE
+
+WHILE 9 <> 9 DO
+    WRITE a;
+ENDWHILE
+
+WHILE 10 <= 9 DO
+    WRITE a;
+ENDWHILE
+
+WHILE 6 > 7 DO
+    WRITE a;
+ENDWHILE
+
+WHILE 6 >= 7 DO
+    WRITE a;
+ENDWHILE
+
+WHILE 9 = 10 DO
+    WRITE a;
+ENDWHILE
+
+END

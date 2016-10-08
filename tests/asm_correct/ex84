@@ -1,0 +1,29 @@
+VAR
+
+a b c
+
+BEGIN
+
+a := 100;
+c := a % 8;
+WRITE c;
+
+b := 16;
+
+c := a % b;
+WRITE c;
+
+READ a;
+c := a % 2;
+WRITE c;
+
+c := a % b;
+WRITE c;
+
+READ a;
+READ b;
+
+c := a % b;
+WRITE c;
+
+END

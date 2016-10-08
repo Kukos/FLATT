@@ -1,0 +1,24 @@
+VAR
+
+a b c n d
+
+BEGIN
+
+READ n;
+
+d := 0;
+WHILE d < 3 DO
+    a := 0;
+    b := 1;
+
+    FOR i FROM 0 TO n DO
+    	c := a + b;
+    	a := b;
+    	b := c;
+    ENDFOR
+
+    WRITE c;
+    d := d + 1;
+ENDWHILE
+
+END

@@ -31,3 +31,20 @@
 # Debug files
 *.dSYM/
 *.su
+
+#CodeBlocks
+*.layout
+*.cbp
+*.depend
+
+#Atom
+.clang_complete
+
+obj/*
+!obj/.gitkeeper
+include/parser.tab.h
+include/avl.h
+include/arraylist.h
+include/darray.h
+include/filebuffer.h
+include/stack.h

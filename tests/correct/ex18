@@ -1,0 +1,39 @@
+{
+    prime factorization
+}
+
+VAR
+n m div pow rem
+
+BEGIN
+
+READ n;
+
+div := 2;
+m := div * div;
+
+WHILE n >= m DO
+    pow := 0;
+    rem := n % div;
+    WHILE rem = 0 DO
+        n := n / div;
+        pow := pow + 1;
+        rem := n % div;
+    ENDWHILE
+    IF pow > 0 THEN
+        WRITE div;
+        WRITE pow;
+    ELSE
+        div := div + 1;
+        m := div * div;
+    ENDIF
+ENDWHILE
+
+IF n <> 1 THEN
+    WRITE n;
+    WRITE 1;
+ELSE
+    SKIP;
+ENDIF
+
+END

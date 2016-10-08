@@ -1,0 +1,45 @@
+{ compare.imp - testowanie porownan }
+VAR
+	a b  { !@#$%^&*()<>?/[]{{:;'"-_+=|\~` 	*) }
+BEGIN
+	READ a;
+	READ b;
+	
+	IF a = b THEN
+		WRITE 1;
+	ELSE
+		SKIP;
+	ENDIF
+
+	IF a <> b THEN
+		WRITE 2;
+	ELSE
+		SKIP;
+	ENDIF
+
+	IF a < b THEN  {**********///////////""""""":::::::<<:;:,;,;,;;;,;,;;,*}
+		WRITE 3;
+	ELSE
+		SKIP;
+	ENDIF
+
+	IF a <= b THEN
+		WRITE 4;
+	ELSE
+		SKIP;
+	ENDIF
+
+	IF a > b THEN
+		WRITE 5;
+	ELSE
+		SKIP;
+	ENDIF
+
+	IF a >= b THEN
+		WRITE 6;
+	ELSE
+		SKIP;
+	ENDIF
+
+END
+

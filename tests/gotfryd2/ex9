@@ -1,0 +1,19 @@
+VAR
+	a b
+BEGIN
+	READ a;
+	READ b;
+	
+	IF a > b THEN
+		SKIP;	
+	ELSE
+		WRITE 1;
+	ENDIF
+
+	IF b < a THEN
+		WRITE 2;
+	ELSE
+		SKIP;
+	ENDIF
+
+END

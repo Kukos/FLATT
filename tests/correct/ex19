@@ -1,0 +1,21 @@
+{
+    Euclidean GCD
+}
+
+VAR
+ a b c
+
+BEGIN
+
+READ a;
+READ b;
+
+WHILE b > 0 DO
+    c := a % b;
+    a := b;
+    b := c;
+ENDWHILE
+
+WRITE a;
+
+END

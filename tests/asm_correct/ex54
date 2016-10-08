@@ -1,0 +1,19 @@
+VAR
+
+a b  t[101] j n
+
+BEGIN
+
+READ n;
+
+t[n] := 1;
+j := n - 1;
+
+FOR i FROM 100 DOWNTO 1 DO
+	t[j] := t[i] * i;
+	j := j - 1;
+ENDFOR
+
+WRITE t[0];
+
+END

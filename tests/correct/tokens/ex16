@@ -1,0 +1,11 @@
+READ	 a 
+WHILE	 a  >  0 
+ b  :=  a  /  2 
+ b  :=  2  *  b 
+IF	 a  >  b 
+WRITE	 1 
+ELSE
+WRITE	 0 
+ENDIF
+ a  :=  a  /  2 
+ENDWHILE

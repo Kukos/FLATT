@@ -1,0 +1,25 @@
+READ	 n 
+ div  :=  2 
+ m  :=  div  *  div 
+WHILE	 n  >=  m 
+ pow  :=  0 
+ rem  :=  n  %  div 
+WHILE	 rem  =  0 
+ n  :=  n  /  div 
+ pow  :=  pow  +  1 
+ rem  :=  n  %  div 
+ENDWHILE
+IF	 pow  >  0 
+WRITE	 div 
+WRITE	 pow 
+ELSE
+ div  :=  div  +  1 
+ m  :=  div  *  div 
+ENDIF
+ENDWHILE
+IF	 n  <>  1 
+WRITE	 n 
+WRITE	 1 
+ELSE
+SKIP
+ENDIF

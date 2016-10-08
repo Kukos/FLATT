@@ -1,0 +1,109 @@
+UWAGA:
+    Kompilator potrzebuje:
+        * gcc 5.4.0
+        * g++ 5.4.0
+        * gnu make 4.1
+        * gnu flex v 2.6.0
+        * gnu bison v 3.0.4
+        * shella zawierajacego calego grepa ( potrzebna funkcja  perl regex)
+
+    Kompilator korzysta z następujących dodatkowych bibliotek:
+        * gnu multiple precision (gmp) v 6.1.1
+        * my libs: avl, arraylist, darray, filebuffer, stack
+
+    Na niektorych maszynach gcc wyswietla warning o polach bitowych dla uint8_t
+    dlatego projekt nie jest budowany z -Werror ( oprocz tego -pedantic nie rzuca zadnych warnow)
+    EDIT:
+        na nowszym gcc >6 występuja warny o dodatkwoych asserciach != NULL w funkcjach ktore maja atrybut nonull
+
+    Projekt zostal sprawdzony valgrindem, nie ma zadnych wyciekow pamieci, oprocz
+    "nadal - osiagalnych bajtow" wygenerowanych przez bisona i flexa
+
+    Wymagania sprzetowe:
+    > 32MB RAM --> analiza statyczna kodu
+
+    JEZYK
+    Calosc pisana jest w jezyku C w standarcie GNU99, ( bardzo duza czesc w ANSI C)
+    uzyte zostaly takze makra gcc, jako dodatkowe przyspieszenie kodu wykonywalnego kompilatora,
+    Prosze nie zmieniac kompilatora w Makefile na clanga
+
+STRUKTURA:
+    ./include       -->     pliki naglowkowe
+    ./libs          -->     moje libki
+    ./obj           -->     wygenerowane pliki ( rowniez te z flexa i bisona )
+    ./src           -->     kody zrodlowe *.c
+    ./tests         -->     plik zrodlowy testow + pliki do testowania
+    ./main          -->     plik zrodlowy glownej binarki
+    ./external      -->     pliki nie zwiazane z samym kompilatorem, jednak potrzebne do jego dzialania
+
+PLIKI ZRODLOWE:
+    arch            -->     architektura maszyny, definicje rejestrow i pamieci oraz kosztow
+    asm             -->     asembler maszyny, definicje zmiennych, mnemonicow i opcodow
+    compiler        -->     kompilator, tylko przeksztalcanie tokenow na asembler, zawiera proste podstawowe optymalizacje
+    compiler_algo   -->     algorytmy kompilatora, generowanie kodu, zarzadca rejestrow, update stringow asm kompilatora podczas generowania kodu
+    log             -->     moj prosty interferjs do logowania bledow
+    optimizer       -->     uzywany gdy mamy opcje -O, analiza statyczna kodu, zmiana flow na tokenach [ NIE ZROBIONE !!! ]
+    parser_helper   -->     kod pomocniczych funkcji dla parsera
+    parser          -->     .l  zawiera lexer, zmiana tekstu na lexemy
+                            .y  zawiera parser, zamienia lexemy na gotowe tokeny "przyjazne" dla kompilatora
+                                oraz wypaluje bledy gramatyczne i semantyczne
+    tokens          -->      definicje tokenow "przyjaznych" dla kompilatora
+
+
+OPTYMALIZACJE
+
+DONE:
+    * Wbudowane (sa zawsze)
+        - wstepne zarzadzanie pamiecia ( ukladamy tablice na koncu aby
+                nie musiec pompowac duzych liczb dla zmiennych)
+        - zarzadzanie rejestrami ( bardzo proste zarzadzanie, gdy rejestry sa zajete zwolnij ten
+            ktory najprawdobodobniej ( nie wiadomo czy if czy else) ) bedzie najpozniej znowu potrzebny
+        - zwijanie stalych ( np a = N * M kompilujemy jako pompowanie do a wyniku N * M)
+        - sledzenie wartosci zmiennych ( gdy tylko to mozliwe czyli gdy zmienne zaczynaja sie od przypisaniem stalej)
+        - w instrukcjach warunkwych, bierzemy warunek lub jego negacje w zaleznosci
+            ktory rejestr moze byc wykorzystany bez odwolania do pamieci
+        - zamieniamy a / a jako ( a == 0 ? 0 : 1)
+        - zamieniamy a / 0, 0 / a, 0 / 0 na 0, a / 1 na a
+        - zamieniamy a % 0, 0 % 0, 0 % a, a % 1, na 0
+        - zamieniamy a % a takze na 0
+        - zamieniamy warunki z 0 na jego odpowiedniki przy uzyciu JZERO
+        - a * 2^k zamieniamy na k SHL
+        - a / 2^k zamieniamy na k SHR
+        - a % 2 - zamieniamy na res = b & 1
+        - a + a - zamieniamy na SHL a
+        - a - a - zamieniamy na 0
+
+    * Analiza statyczna kodu [ OBECNIE NIE ZROBIONE ]
+TODO:
+        - usuwanie nieuzywanych zmiennych
+        - usuwanie niepotrzebnych instrukcji
+        - wypychanie stalych instrukcji poza petle
+
+
+KOMPILACJA
+    make all            -->     libs, compiler, interpreter, test
+    make libs           -->     buduje moje libki i kopiuje je we odpowiednie miejsca
+    make compiler       -->     buduje glowna binarke kompilatora
+    make compiler_dbg   -->     buduje wersje debugowa kompilatora
+    make test           -->     kompiluje testy i uruchamia je
+    make interpreter    -->     kompiluje obie wersje interpretera (Autor: Maciej Gebala)
+
+URUCHAMIANIE
+    !!!!! Proszę przed uruchomieniem kompilatora, puscic moje testy ( make test ), jesli nie przejda
+    oznacza to ze srodowisko nie jest poprawnie skonfigurowane !!!!!
+
+    Parametry:
+        Obowizkowe
+            --input[-i]          kod w naszym jezyku do kompilacji
+            --output[-o]         kod asemblerowy
+
+        dodatkowe:
+            --Wall[-a]           wydrukuj wszyskie warningi ( na ta chwile tylko nieuzywane zmienne )
+            --Werror[-e]         taktuj warningi jako errory
+            --O[1|2][-O]         poziomi optymalizacji analizy statycznej kodu [ OBECNIE NIE UZYWANE !!! ]
+            --tokens[-t]         tryb w ktorym zamiast asemblera dodtajemy liste tokenow do @output
+
+    Przyklady:
+        ./compiler.out --input my_code --output my_code.asm
+        ./compiler.out --input my_code --output my_code.asm --Wall --Werror --O2
+        ./compiler.out --input my_code --tokens --output mytokens

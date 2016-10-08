@@ -1,0 +1,51 @@
+VAR
+
+a b
+c d
+
+t[10000000]
+
+BEGIN
+
+a := 0;
+b := a;
+c := b;
+d := c;
+
+IF a < b THEN
+	SKIP;
+ELSE
+	SKIP;
+ENDIF
+
+IF b = 10 THEN
+    SKIP;
+ELSE
+    SKIP;
+ENDIF
+
+IF 11 <> 12 THEN
+    SKIP;
+ELSE
+    SKIP;
+ENDIF
+
+IF b <= d THEN
+    SKIP;
+ELSE
+    SKIP;
+ENDIF
+
+IF a > 1000 THEN
+    SKIP;
+ELSE
+    SKIP;
+ENDIF
+
+IF 100 >= t[a] THEN
+    SKIP;
+ELSE
+    SKIP;
+ENDIF
+
+END

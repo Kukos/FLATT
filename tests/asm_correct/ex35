@@ -1,0 +1,30 @@
+VAR
+
+a b c d e f g h i j
+
+BEGIN
+
+READ a;
+READ b;
+c := a * b;
+d := b * c;
+e := c * d;
+f := d * e;
+g := e * f;
+h := f * g;
+i := g * h;
+j := h * i;
+
+
+WRITE a;
+WRITE b;
+WRITE c;
+WRITE d;
+WRITE e;
+WRITE f;
+WRITE g;
+WRITE h;
+WRITE i;
+WRITE j;
+
+END

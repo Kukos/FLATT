@@ -1,0 +1,41 @@
+VAR
+
+a b c d e f g t[100000000000000]
+BEGIN
+
+READ a;
+
+b := 1000 + a;
+c := a * b;
+
+WRITE a;
+WRITE b;
+WRITE c;
+
+d := a * c;
+t[d] := a + b;
+
+e := d / t[d];
+READ f;
+
+f := d;
+d := d / t[d];
+
+READ t[1];
+READ t[2];
+
+t[0] := t[1] * t[2];
+t[0] := t[0] / t[2];
+t[1] := t[1] - 100;
+t[0] := 10000000 / t[0];
+t[0] := t[0] * t[1];
+
+WRITE e;
+WRITE d;
+WRITE f;
+WRITE t[f];
+WRITE t[0];
+WRITE t[1];
+WRITE t[2];
+
+END

@@ -1,0 +1,12 @@
+VAR
+
+a b q w e r t y u i o p
+s d f g h j k l z x c v n m 
+
+BEGIN
+
+a := 100;
+
+WRITE a;
+
+END

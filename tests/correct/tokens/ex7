@@ -1,0 +1,4 @@
+FOR  i  FROM  10  TO  1000 
+WRITE	 i 
+SKIP
+ENDFOR

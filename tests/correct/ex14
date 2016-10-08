@@ -1,0 +1,13 @@
+VAR
+
+a b c
+
+BEGIN
+
+b := 0;
+c := 0;
+a := b * c;
+
+WRITE a;
+
+END

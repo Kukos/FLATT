@@ -1,0 +1,17 @@
+{ loop.imp - zagniezdzone petle }
+VAR
+	a b c
+BEGIN
+	READ a;
+	b := 10;
+	c := 1;
+	FOR k FROM 999999 DOWNTO 0 DO
+		FOR i FROM 1 TO 3 DO
+			a := a + b;
+			c := c + 1;
+		ENDFOR
+	ENDFOR
+	WRITE a;
+	WRITE c;
+END
+

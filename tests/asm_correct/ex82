@@ -1,0 +1,20 @@
+VAR
+  a b c
+BEGIN
+
+a := 100 % 7;
+WRITE a;
+
+b := 18;
+a := 100000 % b;
+WRITE a;
+
+a := b % 3;
+WRITE a;
+
+a := 123456;
+b := 321;
+c := a % b;
+WRITE c;
+
+END
