@@ -4,7 +4,7 @@
 /*
 	Find pattern in text ( stdin  or file )
 
-	Algorithms searching for pattern and print input text with matching pattern on stdout
+	Algorithms pattern matching and print input text with matching pattern on stdout
 
 	Author: Michal Kukowski
 	email: michalkukowski10@gmail.com
