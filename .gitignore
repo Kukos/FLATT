@@ -37,3 +37,8 @@
 *.cbp
 *.depend
 
+#flex
+*.yy.c
+
+#Add my static libs
+!libs/*.a
