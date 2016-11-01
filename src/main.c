@@ -68,8 +68,8 @@ int main(int argc, char **argv)
                 }
 
                 fb = file_buffer_create(fd,PROT_READ);
-		close(fd);
-			
+				close(fd);
+
                 text = fb->buffer;
                 break;
             }

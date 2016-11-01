@@ -81,14 +81,16 @@ static int *fsm_create(const char *pattern)
 
     if(pattern == NULL)
     {
-        __log__("pattern = NULL\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\tpattern = NULL\n");
         return NULL;
     }
 
     len = (int)strlen(pattern);
     if(! len)
     {
-        __log__("len == 0\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\tlen == 0\n");
         return NULL;
     }
 
@@ -96,14 +98,16 @@ static int *fsm_create(const char *pattern)
     fsm = (int*)malloc(sizeof(int) * ALPHABET_SIZE * (len + 1));
     if(fsm == NULL)
     {
-        __log__("malloc error\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\tmalloc error\n");
         return NULL;
     }
 
     /* From init state we go to the next state IFF we match letter, so init first row */
     if(memset(fsm, 0, sizeof(int) * ALPHABET_SIZE) == NULL)
     {
-        __log__("memset error\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\tmemset error\n");
 
         FREE(fsm);
         return NULL;
@@ -122,7 +126,8 @@ static int *fsm_create(const char *pattern)
                 fsm + INDEX(state_with_max_prefix, 0, ALPHABET_SIZE),
                 sizeof(int) * ALPHABET_SIZE) == NULL )
             {
-                __log__("memcpy error\n" DEBUG);
+                __log__(DEBUG);
+                __log__("\tmemcpy error\n");
 
                 FREE(fsm);
                 return NULL;
@@ -151,21 +156,24 @@ static int *kmp_states_create(const char *pattern)
 
     if(pattern == NULL)
     {
-        __log__("pattern == NULL\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\tnpattern == NULL\n");
         return NULL;
     }
 
     len = (int)strlen(pattern);
     if(! len)
     {
-        __log__("len == 0\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\tlen == 0\n");
         return NULL;
     }
 
     states = (int*)malloc(sizeof(int) * len);
     if(states == NULL)
     {
-        __log__("malloc error\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\tmalloc error\n");
         return NULL;
     }
 
@@ -210,14 +218,16 @@ void fsm(const char *text, const char *pattern)
 
     if(pattern == NULL || text == NULL)
     {
-        __log__("pattern == NULL || text == NULL\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\tpattern == NULL || text == NULL\n");
         return;
     }
 
     fsm_states = fsm_create(pattern);
     if(fsm_states == NULL)
     {
-        __log__("fsm_create error\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\tfsm_create error\n");
         return;
     }
 
@@ -272,7 +282,8 @@ void kmp(const char *text, const char *pattern)
 
     if(text == NULL || pattern == NULL)
     {
-        __log__("text == NULL || pattern == NULL\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\ttext == NULL || pattern == NULL\n");
         return;
     }
 
@@ -280,7 +291,8 @@ void kmp(const char *text, const char *pattern)
 
     if(states == NULL)
     {
-        __log__("kmp_states_create error\n" DEBUG);
+        __log__(DEBUG);
+        __log__("\tkmp_states_create error\n");
         return;
     }
 
