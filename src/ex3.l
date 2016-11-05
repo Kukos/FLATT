@@ -28,7 +28,22 @@ int yylex(void);
 %x SINGLE_DOC
 %x MULTI_DOC
 
+%x STRING
+
 %%
+
+\"									{
+										BEGIN(STRING);
+										printf("%s",yytext);
+									}
+
+<STRING>[^\"]*						printf("%s",yytext);
+
+<STRING>\"							{
+										BEGIN(INITIAL);
+										printf("%s",yytext);
+									}
+
 "///"								{
 										BEGIN(SINGLE_DOC);
 										printf("%s",yytext);
@@ -56,7 +71,7 @@ int yylex(void);
 										BEGIN(INITIAL);
 										printf("%s",yytext);
 									}
-									
+
 <MULTI_DOC>[^\*]|[^/]				printf("%s",yytext);
 
 

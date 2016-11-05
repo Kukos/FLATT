@@ -25,7 +25,22 @@ int yylex(void);
 %x MULTI_COMMENT
 %x MULTI_COMMENT_BL
 
+%x STRING
+
 %%
+
+\"									{
+										BEGIN(STRING);
+										printf("%s",yytext);
+									}
+
+<STRING>[^\"]*						printf("%s",yytext);
+
+<STRING>\"							{
+										BEGIN(INITIAL);
+										printf("%s",yytext);
+									}
+
 ^"//"								BEGIN(SINGLE_COMMENT_BL);
 <SINGLE_COMMENT_BL>\\\n				print_new_line = TRUE;
 <SINGLE_COMMENT_BL>\n				{
