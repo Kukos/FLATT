@@ -36,13 +36,14 @@ int yylex(void);
 										BEGIN(STRING);
 										printf("%s",yytext);
 									}
-
-<STRING>[^\"]*						printf("%s",yytext);
-
 <STRING>\"							{
 										BEGIN(INITIAL);
 										printf("%s",yytext);
 									}
+
+
+<STRING>[^\\]|[^\"]					printf("%s",yytext);
+<STRING>"\\\""
 
 "///"								{
 										BEGIN(SINGLE_DOC);
@@ -54,7 +55,11 @@ int yylex(void);
 										printf("%s",yytext);
 									}
 <SINGLE_DOC>\\\n
-<SINGLE_DOC>\n						BEGIN(INITIAL);
+<SINGLE_DOC>\n						{
+										BEGIN(INITIAL);
+										printf("\n");
+									}
+
 <SINGLE_DOC>[^\\]|[^\n]				printf("%s",yytext);
 
 "/**"								{
@@ -67,10 +72,12 @@ int yylex(void);
 										printf("%s",yytext);
 									}
 
-<MULTI_DOC>"*/"						{
+<MULTI_DOC>"*/"$					{
 										BEGIN(INITIAL);
 										printf("%s",yytext);
 									}
+
+<MULTI_DOC>"*/"						BEGIN(INITIAL);
 
 <MULTI_DOC>[^\*]|[^/]				printf("%s",yytext);
 
@@ -93,15 +100,12 @@ int yylex(void);
 									}
 <SINGLE_COMMENT>[^\\]|[^\n]
 
-^"/*"								BEGIN(MULTI_COMMENT_BL);
-<MULTI_COMMENT_BL>"*/"				BEGIN(INITIAL);
-<MULTI_COMMENT_BL>[^\*]|[^/]
-
 "/*"								BEGIN(MULTI_COMMENT);
-<MULTI_COMMENT>"*/"					{
+<MULTI_COMMENT>"*/"$				{
 										printf("\n");
 										BEGIN(INITIAL);
 									}
+<MULTI_COMMENT>"*/"					BEGIN(INITIAL);
 <MULTI_COMMENT>[^\*]|[^/]
 %%
 
