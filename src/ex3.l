@@ -23,7 +23,6 @@ int yylex(void);
 %x SINGLE_COMMENT_BL
 
 %x MULTI_COMMENT
-%x MULTI_COMMENT_BL
 
 %x SINGLE_DOC
 %x MULTI_DOC

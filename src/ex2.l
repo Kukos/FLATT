@@ -23,7 +23,6 @@ int yylex(void);
 %x SINGLE_COMMENT_BL
 
 %x MULTI_COMMENT
-%x MULTI_COMMENT_BL
 
 %x STRING
 
@@ -33,13 +32,14 @@ int yylex(void);
 										BEGIN(STRING);
 										printf("%s",yytext);
 									}
-
-<STRING>[^\"]*						printf("%s",yytext);
-
 <STRING>\"							{
 										BEGIN(INITIAL);
 										printf("%s",yytext);
 									}
+
+
+<STRING>[^\\]|[^\"]					printf("%s",yytext);
+<STRING>"\\\""
 
 ^"//"								BEGIN(SINGLE_COMMENT_BL);
 <SINGLE_COMMENT_BL>\\\n				print_new_line = TRUE;
@@ -59,16 +59,14 @@ int yylex(void);
 									}
 <SINGLE_COMMENT>[^\\]|[^\n]
 
-^"/*"								BEGIN(MULTI_COMMENT_BL);
-<MULTI_COMMENT_BL>"*/"				BEGIN(INITIAL);
-<MULTI_COMMENT_BL>[^\*]|[^/]
-
 "/*"								BEGIN(MULTI_COMMENT);
-<MULTI_COMMENT>"*/"					{
+<MULTI_COMMENT>"*/"$				{
 										printf("\n");
 										BEGIN(INITIAL);
 									}
+<MULTI_COMMENT>"*/"					BEGIN(INITIAL);
 <MULTI_COMMENT>[^\*]|[^/]
+
 
 %%
 
