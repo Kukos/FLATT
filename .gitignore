@@ -37,3 +37,6 @@
 *.cbp
 *.depend
 
+obj/*
+!obj/.gitkeeper
+!libs/*
