@@ -79,5 +79,5 @@ int main(void)
 {
 	yylex();
 
-	return 1;
+	return 0;
 }

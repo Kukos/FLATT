@@ -8,6 +8,9 @@
 #include <stack.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
+
+#define STRING(x) #x
 
 #define STACK_CLEANUP(S) \
 	do{ S->darray->num_entries = 0; }while(0)
@@ -18,6 +21,13 @@
 #define BASIC_OP(stack,arg1,arg2,res,op) \
 	do \
 	{\
+		if(! strcmp(STRING(op),"%") || ! strcmp(STRING(op),"/")) \
+			if( ! arg1 ) \
+			{ \
+				STACK_ERROR("Division by 0\n");\
+				break; \
+			} \
+\
 		if(stack_pop(stack,(void*)&arg1) || stack_pop(stack,(void*)&arg2))\
 			STACK_ERROR("Not enough arguments\n");\
 \
@@ -79,7 +89,7 @@ WHITE_C				[ \t]
 						if(stack_pop(stack,(void*)&arg1) || stack_pop(stack,(void*)&arg2))
 							STACK_ERROR("Not enough arguments\n");
 
-						res = (int)pow((int)arg2,(int)arg1);
+						res = (int)pow((double)arg2,(double)arg1);
 
 						if(stack_push(stack,(void*)&res))
 							STACK_ERROR("stack_push error\n");
